@@ -1,0 +1,12 @@
+CheckSUM para el APK
+=====================
+
+https://datalogic.github.io/aeqr/
+
+https://hash.online-convert.com/sha1-generator
+
+keytool -printcert -jarfile [path_to_your_apk] | grep -Po "(?<=SHA256:) .*" | xxd -r -p | openssl base64 | tr -d '=' | tr -- '+/=' '-_'
+
+------------
+
+keytool -printcert -jarfile app-release.apk | grep -Po "(?<=SHA256:) .*" | xxd -r -p | openssl base64 | tr -d '=' | tr -- '+/=' '-_'
